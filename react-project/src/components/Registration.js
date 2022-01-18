@@ -1,29 +1,30 @@
 import React from "react";
 import {useForm} from "react-hook-form";
-import {useState} from "react";
+import {getDatabase} from "firebase/database";
 
 
 function Registration() {
 
-    const {register, handleSubmit} = useForm()
-    const {name, setName} = useState("123")
+    const {register, handleSubmit, formState: {errors, submitCount}} = useForm()
 
-    const qiwi = (data) => {
-        setName(JSON.stringify(data))
+    const onSubmit = (data) => {
+        console.log(JSON.stringify(data))
 
     }
 
-    return (
+
+    return (<form onSubmit={handleSubmit(onSubmit)}>
         <div className="Registration">
-            <h1>Регистрация</h1>
-            <form onSubmit={handleSubmit(qiwi)}>
-                <input type="text" placeholder="Введите " {...register("name")}/>
+            <input type="email" placeholder="Введите почту" name="email" {...register('email', {required: true})}/>
+            <input type="password" placeholder="Пароль" name="password" {...register('password', {
+                required: true,
+                minLength: 5
+            })}/>
+            {errors.password && <i>Не менее 5 символов</i>}
+            <button type="submit">Регистрация</button>
 
-                <button type="submit">Готово!</button>
-
-            </form>
         </div>
-    );
+    </form>)
 }
 
 export default Registration;
