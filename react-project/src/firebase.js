@@ -1,19 +1,21 @@
-import { initializeApp } from 'firebase/app';
-import { getDatabase } from "firebase/database";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import {getDatabase} from "firebase/database";
 
-// Set the configuration for your app
-// TODO: Replace with your project's config object
+
+
 const firebaseConfig = {
-    apiKey: "apiKey",
-    authDomain: "projectId.firebaseapp.com",
-    // For databases not in the us-central1 location, databaseURL will be of the
-    // form https://[databaseName].[region].firebasedatabase.app.
-    // For example, https://your-database-123.europe-west1.firebasedatabase.app
-    databaseURL: "https://databaseName.firebaseio.com",
-    storageBucket: "bucket.appspot.com"
+    apiKey: "AIzaSyBuCn3bfP-ffRUrgh6itDTH3AI3pJutbr8",
+    authDomain: "react-project-48bca.firebaseapp.com",
+    databaseURL: "https://react-project-48bca-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "react-project-48bca",
+    storageBucket: "react-project-48bca.appspot.com",
+    messagingSenderId: "334069935765",
+    appId: "1:334069935765:web:3e8beda073518cf14ef59c",
+    measurementId: "G-D0VM83NBJF"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Get a reference to the database service
-const database = getDatabase(app);
+const analytics = getAnalytics(app);
+export const db = getDatabase(app)
