@@ -1,34 +1,48 @@
 import React from "react";
-import {set, useForm} from "react-hook-form";
-import {useState} from "react";
-import {getDatabase} from "firebase/database";
+import '../App.css';
+import {useState, useEffect} from "react";
+import {uid} from "uid";
+
+import {getDatabase, ref, set} from "firebase/database";
+import {Link} from "react-router-dom";
 
 
 function Registration() {
 
-    const {register, handleSubmit, formState: {errors, submitCount}} = useForm()
-    const [data, setData] = useState("")
+    const [name, setName] = useState("")
 
+    //Записываем данные в хук
 
-    const onSubmit = (data) => {
-        setData(JSON.stringify(data))
-        console.log(data)
-
+    const handleChange = (e) => {
+        setName(e.target.value)
     }
 
 
-    return (<form onSubmit={handleSubmit(onSubmit)}>
-        <div className="Registration">
-            <input type="email" placeholder="Введите почту" name="email" {...register('email', {required: true})}/>
-            <input type="password" placeholder="Пароль" name="password" {...register('password', {
-                required: true,
-                minLength: 5
-            })}/>
-            {errors.password && <i>Не менее 5 символов</i>}
-            <button type="submit">Регистрация</button>
+    // Запись данных Firebase
+    const writeDataBase = () => {
+        const uuid = uid()
+        const db = getDatabase()
+        set(ref(db, `/uuid`), {
+            name,
+            uuid,
+            complete: false
+        })
+        setName("")
+    }
 
+    //Чтение данных Firebase
+
+
+    return (<div className="container">
+            <div className="registration">
+                <input className="registration_input" type="text" value={name} placeholder="Введите свой логин"
+                       onChange={handleChange}/>
+                <Link to="/app">
+                    <button className="registration_button" onClick={writeDataBase}>Принять</button>
+                </Link>
+            </div>
         </div>
-    </form>)
+    )
 }
 
 export default Registration;
