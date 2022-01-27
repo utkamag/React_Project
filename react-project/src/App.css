@@ -1,46 +1,79 @@
 *, *:before, *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 /* App */
 
-.App {
-  text-align: center;
+.app {
+    text-align: center;
 }
 
- /* Registration */
+/* Registration */
 
 .container {
-  background-image: url("../public/images/registration/Logo.png");
-  position: fixed;
-  background-size: cover;
-  background-position: center;
-  min-width: 100%;
-  min-height: 100%;
+    background-image: url("../public/images/registration/Logo.png");
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .registration {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 360px;
-  text-align: center;
-  font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 330px;
+    text-align: center;
+    font-size: 20px;
 }
+
 .registration_input {
-  width: 300px;
-  height: 30px;
-  padding: 10px;
-  border: 2px solid gray;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.06);
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
 
 
 }
+
 .registration_button {
-  margin-top: 15px;
-  width: 150px;
-  height: 25px;
-
+    margin-top: 15px;
+    width: 150px;
+    height: 25px;
 }
 
+.registration_button:hover {
+    margin-top: 15px;
+    width: 150px;
+    height: 25px;
+    color: black;
+    background: aquamarine;
+    transition: 0.1s linear;
+    border: 2px solid gray;
+    border-radius: 2px;
+}
+
+.registration_login {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    color: aquamarine;
+}
+
+/* Header */
+
+.header_first_text {
+    font-size: 20px;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+}
+header_firebase {
+    display: flex;
+    flex-direction: column;
+}

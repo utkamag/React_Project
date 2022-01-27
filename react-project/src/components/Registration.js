@@ -1,5 +1,6 @@
 import React from "react";
-import '../App.css';
+import '../App.css'
+import App from "./App";
 import {useState, useEffect} from "react";
 import {uid} from "uid";
 
@@ -30,11 +31,11 @@ function Registration() {
         setName("")
     }
 
-    //Чтение данных Firebase
 
 
     return (<div className="container">
             <div className="registration">
+                <div className="registration_login">Придумайте свой логин</div>
                 <input className="registration_input" type="text" value={name} placeholder="Введите свой логин"
                        onChange={handleChange}/>
                 <Link to="/app">

@@ -1,6 +1,6 @@
 import React from "react";
 import Registration from "./Registration";
-import App from "../App";
+import App from "./App";
 import {Route, Routes} from "react-router-dom";
 
 // Описываем базовый роутинг приложения
