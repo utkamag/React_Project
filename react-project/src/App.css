@@ -1,5 +1,16 @@
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
@@ -66,13 +77,14 @@
     font-size: 60px;
     color: blueviolet;
 }
+
 /* PreHeader */
 
 .pre_header_title {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 250px;
     background-color: #282c34;
     font-size: 60px;
     color: aliceblue;
@@ -90,6 +102,89 @@
     font-size: 40px;
     color: white;
 }
+
 .header_firebase_nickname {
     color: blueviolet;
 }
+
+/* Description */
+
+.Description_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: aliceblue;
+    font-family: "Roboto Light";
+    background-color: #282c34;
+    height: 300px;
+
+
+}
+
+/* Line */
+
+.line {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #0D1422;
+    color: white;
+    font-family: "Roboto Light";
+    font-size: 20px;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+
+/* Earth, Mercury, Mars, Jupiter Saturn, Uranium, Neptune */
+
+
+.earth, .mercury, .venera, .mars, .jupiter, .saturn, .uranium, .neptune {
+    display: flex;
+    background-color: #202327;
+}
+
+.earth_img, .mercury_img, .venera_img, .mars_img, .jupiter_img, .uranium_img, .neptune_img {
+    margin-left: 100px;
+    width: 25%;
+    padding: 30px;
+
+}
+
+.earth_text, .mercury_text, .venera_text, .mars_text, .jupiter_text, .uranium_text, .neptune_text {
+
+    margin-top: 70px;
+    margin-left: 90px;
+    text-align: left;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    color: white;
+
+}
+
+/* Saturn special settings */
+
+.saturn_img {
+    margin-left: 100px;
+    width: 25%;
+    height: 340px;
+}
+
+.saturn_text {
+    margin-top: 70px;
+    margin-left: 90px;
+    text-align: left;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+

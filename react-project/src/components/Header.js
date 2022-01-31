@@ -10,7 +10,7 @@ import {initializeApp} from 'firebase/app';
 
 function Header() {
 
-    //Хук азы данных
+    //Хук базы данных
 
     const [todos, setTodos] = useState([])
 
@@ -30,12 +30,11 @@ function Header() {
 
     return (
         <div className="header">
-            <Parallax bgImage={img3} bgImageAlt="the cat" strenght={500}>
-                <div style={{height: 600}} className="header_first_text">
-                    <div>Добро пожаловать! <div className="header_firebase_nickname">{todos}</div></div>
-                </div>
-            </Parallax>
-            <div style={{height: "100vh"}}></div>
+                <Parallax bgImage={img3} bgImageAlt="the cat" strenght={500}>
+                    <div style={{height: 600}} className="header_first_text">
+                        <div>Добро пожаловать! <div className="header_firebase_nickname">{todos}</div></div>
+                    </div>
+                </Parallax>
 
         </div>
     )
