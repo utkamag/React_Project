@@ -147,7 +147,12 @@ p {
 .earth, .mercury, .venera, .mars, .jupiter, .saturn, .uranium, .neptune {
     display: flex;
     background-color: #202327;
+    transition: 0.15s linear;
+    box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.2);
+
+
 }
+
 
 .earth_img, .mercury_img, .venera_img, .mars_img, .jupiter_img, .uranium_img, .neptune_img {
     margin-left: 100px;
@@ -186,5 +191,6 @@ p {
     color: white;
     margin-bottom: 40px;
 }
+
 
 
