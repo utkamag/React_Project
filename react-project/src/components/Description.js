@@ -1,6 +1,6 @@
 import React from "react";
-import img3 from "./image/img-space.jpg";
-import {Parallax} from "react-parallax";
+
+
 
 
 
