@@ -2,7 +2,7 @@
 
 Ссылка на проект: https://project-1-5dd73.web.app/
 
-![](react-project/src/components/image/screenshot)
+![](react-project/src/components/image/screenshot.png)
 
 Особенности проекта:
 
