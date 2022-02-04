@@ -269,7 +269,14 @@ p {
         width: 100%;
 
     }
+}
 
+@media (max-width: 380px) {
+    /* Registration */
+
+    .registration {
+        margin-top: 240px;
+    }
 
 }
 
