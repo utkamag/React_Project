@@ -5,7 +5,8 @@ body {
 *, *:before, *:after {
     box-sizing: border-box;
 }
-h1,h2,h3,h4,h5,h6 {
+
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
@@ -191,6 +192,87 @@ p {
     color: white;
     margin-bottom: 40px;
 }
+
+/* Media query */
+
+@media (max-width: 992px) {
+
+    /* Description */
+    .Description_text {
+        font-size: 30px;
+    }
+
+    /* Planets (Earth, Mercury, Mars, Jupiter, Uranium, Neptune) */
+    .earth, .mercury, .venera, .mars, .jupiter, .saturn, .uranium, .neptune {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+
+    }
+
+    .earth_img, .mercury_img, .venera_img, .mars_img, .jupiter_img, .uranium_img, .neptune_img {
+        width: 50%;
+        margin: 0;
+
+    }
+
+    .earth_text, .mercury_text, .venera_text, .mars_text, .jupiter_text, .uranium_text, .neptune_text {
+
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 20px;
+
+    }
+
+    /* Saturn */
+    .saturn_img {
+        width: 50%;
+        margin: 0;
+    }
+
+    .saturn_text {
+        margin-top: 0;
+        margin-left: 90px;
+        margin-bottom: 20px;
+        width: 50%;
+
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* All planet */
+
+    .earth_img, .mercury_img, .venera_img, .mars_img, .jupiter_img, .uranium_img, .neptune_img {
+        width: 100%;
+    }
+
+    .earth_text, .mercury_text, .venera_text, .mars_text, .jupiter_text, .uranium_text, .neptune_text {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    /* Saturn */
+    .saturn_img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .saturn_text {
+        padding: 10px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+        width: 100%;
+
+    }
+
+
+}
+
 
 
 
