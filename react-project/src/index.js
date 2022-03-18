@@ -6,7 +6,22 @@ import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 import Router from "./components/Router";
 import {BrowserRouter, Route} from "react-router-dom";
+import {createStore} from "redux";
 
+// Работа с Redux
+
+action = {type: ""}
+
+
+const reducer = (state, action) => {
+
+}
+
+
+const store = createStore()
+
+
+// Роутинг
 
 ReactDOM.render(
     <React.StrictMode>
@@ -18,6 +33,7 @@ ReactDOM.render(
 );
 
 reportWebVitals();
+
 
 //Настройки Google Firebase
 
