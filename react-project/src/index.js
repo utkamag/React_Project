@@ -8,7 +8,7 @@ import Router from "./components/Router";
 import {BrowserRouter, Route} from "react-router-dom";
 import {createStore} from "redux";
 
-// Работа с Redux
+//  Работа с Redux
 
 action = {type: ""}
 
