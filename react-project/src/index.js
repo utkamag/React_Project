@@ -3,34 +3,54 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import { initializeApp } from "firebase/app";
+import {initializeApp} from "firebase/app";
 import Router from "./components/Router";
 import {BrowserRouter, Route} from "react-router-dom";
 import {createStore} from "redux";
+import {Provider} from "react-redux";
 
 //  Работа с Redux
 
-action = {type: ""}
 
+// Создаем State
 
-const reducer = (state, action) => {
-
+const deafultState = {
+    cash: 0,
 }
 
 
-const store = createStore()
+// Создаем Редьюсер
+
+const reducer = (state = deafultState, action) => {
+    switch (action.type) {
+        case "ADD_NUMBER":
+            return {...state, cash: state.cash + action.payload}
+        case "DELETE_NUMBER":
+            return {...state, cash: state.cash - action.payload}
+
+        default:
+            return state
+    }
+
+}
+
+// Создаем стор
+
+const store = createStore(reducer)
 
 
 // Роутинг
 
 ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Router/>
-        </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+    <Provider store={store}>
+        <React.StrictMode>
+            <BrowserRouter>
+                <Router/>
+            </BrowserRouter>
+        </React.StrictMode>
+    </Provider>
+)
+;
 
 reportWebVitals();
 
