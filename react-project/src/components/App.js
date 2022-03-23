@@ -11,9 +11,12 @@ import Jupiter from "./Jupiter";
 import Saturn from "./Saturn";
 import Uranium from "./Uranium";
 import Neptune from "./Neptune";
+import ReduxTest from "./ReduxTest";
+import {useDispatch, useSelector} from "react-redux";
 
 
 function App() {
+
     return (
         <div className="app">
             <PreHeader/>
@@ -37,6 +40,7 @@ function App() {
             <Line/>
             <Neptune/>
             <Line/>
+            <ReduxTest/>
 
 
         </div>

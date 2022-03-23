@@ -15,7 +15,7 @@ import {Provider} from "react-redux";
 // Создаем State
 
 const deafultState = {
-    cash: 0,
+    cash: 5,
 }
 
 
@@ -48,9 +48,9 @@ ReactDOM.render(
                 <Router/>
             </BrowserRouter>
         </React.StrictMode>
-    </Provider>
-)
-;
+    </Provider>,
+    document.getElementById('root')
+);
 
 reportWebVitals();
 
