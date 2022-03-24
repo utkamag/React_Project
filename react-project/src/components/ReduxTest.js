@@ -7,7 +7,7 @@ function ReduxTest(){
     const dispatch = useDispatch()
 
     // Получаем стейт
-    const cash = useSelector(state => state.cash)
+    const cash = useSelector(state => state.reducer.cash)
 
 
     //Кнопка 1 для теста redux
