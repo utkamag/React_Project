@@ -12,10 +12,18 @@ import Saturn from "./Saturn";
 import Uranium from "./Uranium";
 import Neptune from "./Neptune";
 import ReduxTest from "./ReduxTest";
-import {useDispatch, useSelector} from "react-redux";
+import Card from "./Card";
+import Data from "./Data";
 
 
 function App() {
+
+    const newData = Data.map(name => {
+        return (
+            <Card key={name.id}
+                  names={name.name}/>
+        )
+    })
 
     return (
         <div className="app">
@@ -41,7 +49,7 @@ function App() {
             <Neptune/>
             <Line/>
             <ReduxTest/>
-
+            {newData}
 
         </div>
     )
