@@ -8,6 +8,10 @@ const data = [
     {
         id:2,
         name: "Egor"
+    },
+    {
+        id:3,
+        name: "Oleg"
     }
 ]
 
