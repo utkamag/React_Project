@@ -12,6 +12,10 @@ const data = [
     {
         id:3,
         name: "Oleg"
+    },
+    {
+        id:4,
+        name: "Anna"
     }
 ]
 
