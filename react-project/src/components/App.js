@@ -48,8 +48,8 @@ function App() {
             <Line/>
             <Neptune/>
             <Line/>
-            <ReduxTest/>
             {newData}
+            <ReduxTest/>
 
         </div>
     )
