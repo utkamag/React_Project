@@ -14,6 +14,8 @@ import Neptune from "./Neptune";
 import ReduxTest from "./ReduxTest";
 import Card from "./Card";
 import Data from "./Data";
+import StyledComponentTest from "./StyledComponentTest";
+import GlobalStyle from "./GlobalStyle";
 
 
 function App() {
@@ -27,30 +29,33 @@ function App() {
 
     return (
         <div className="app">
-            <PreHeader/>
-            <Header/>
-            <Line/>
-            <Description/>
-            <Line/>
-            <Mercury/>
-            <Line/>
-            <Venera/>
-            <Line/>
-            <Earth/>
-            <Line/>
-            <Mars/>
-            <Line/>
-            <Jupiter/>
-            <Line/>
-            <Saturn/>
-            <Line/>
-            <Uranium/>
-            <Line/>
-            <Neptune/>
-            <Line/>
-            {newData}
-            <ReduxTest/>
-
+            <>
+                <GlobalStyle/>
+                <PreHeader/>
+                <Header/>
+                <Line/>
+                <Description/>
+                <Line/>
+                <Mercury/>
+                <Line/>
+                <Venera/>
+                <Line/>
+                <Earth/>
+                <Line/>
+                <Mars/>
+                <Line/>
+                <Jupiter/>
+                <Line/>
+                <Saturn/>
+                <Line/>
+                <Uranium/>
+                <Line/>
+                <Neptune/>
+                <Line/>
+                {newData}
+                <ReduxTest/>
+                <StyledComponentTest/>
+            </>
         </div>
     )
 }
