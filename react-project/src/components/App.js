@@ -16,6 +16,8 @@ import Card from "./Card";
 import Data from "./Data";
 import StyledComponentTest from "./StyledComponentTest";
 import GlobalStyle from "./GlobalStyle";
+import ReactInput from "./ReactInput";
+import RefInput from "./RefInput"
 
 
 function App() {
@@ -55,6 +57,8 @@ function App() {
                 {newData}
                 <ReduxTest/>
                 <StyledComponentTest/>
+                <ReactInput/>
+                <RefInput/>
             </>
         </div>
     )
