@@ -17,6 +17,7 @@ p {
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 /* App */
 
@@ -115,8 +116,8 @@ p {
     justify-content: center;
     align-items: center;
     font-size: 40px;
+    font-family: "Courier New";
     color: aliceblue;
-    font-family: "Roboto Light";
     background-color: #282c34;
     height: 300px;
 
